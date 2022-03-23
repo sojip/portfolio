@@ -1,7 +1,10 @@
 :root {
-  --primaryColor: #c084fc;
+  /* --primaryColor: #c084fc; */
+  --primaryColor: #eab308;
+
   --header-content-width: 800px;
-  --text-backgroundColor: #fdf4ff;
+  /* --text-backgroundColor: #fdf4ff; */
+  --text-backgroundColor: #fefce8;
 }
 
 html,
@@ -23,27 +26,35 @@ header {
   filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 15px);
   height: 100%;
   position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 5vw 2.5vw;
 }
 
 .path-wrapper {
-  height: 90%;
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
   background-color: var(--primaryColor);
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 5% 100%, 0% 100%);
+  z-index: -1;
 }
 
 .contentWrapper {
-  max-width: var(--header-content-width);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* border: solid 1px blue; */
+  border: solid 3px blue;
+  position: relative;
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 header .photo {
   z-index: 2;
-  width: 250px;
-  height: auto;
+  width: 38%;
+  border-radius: 10px;
+  /* object-fit: contain; */
+  /* vertical-align: middle; */
   float: left;
   margin-right: 20px;
   position: relative;
@@ -52,17 +63,48 @@ header .photo {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+/* header .name {
+  border: solid 1px red;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+} */
+
 .about-wrapper {
-  padding: 53px;
+  padding: 75px 2.5vw;
+
+  /* border: solid 4px red; */
+  height: 100%;
+  width: 100%;
+
+  /* position: absolute; */
 }
 
 .textcontainer {
   padding: 20px;
   max-width: var(--header-content-width);
   background-color: var(--text-backgroundColor);
-  /* background-color: white; */
+  /* background-color: transparent; */
+  /* margin-bottom: -100px; */
+  border-radius: 10px 0 0 0;
   position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* top: 50%;
+  transform: translateY(-50%); */
   /* border: solid 2px yellow; */
+}
+
+.textcontainer h1 {
+  margin: 20px 0;
+}
+
+.links {
+  padding: 24px 0;
+}
+
+.links a {
+  float: right;
+  margin-left: 10px;
 }
