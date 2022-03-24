@@ -16,6 +16,8 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* header */
@@ -76,6 +78,8 @@ header .name {
   background-color: rgba(0, 0, 0, 0.09);
   padding: 10px;
   border-radius: 0 0 10px 10px;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 .about-wrapper {
@@ -244,28 +248,30 @@ footer .photo {
 .contact-me p:nth-child(1),
 .myaddress {
   margin-bottom: 20px;
+  line-height: 1.5rem;
 }
 
+.contact-me > div:nth-child(3),
 .contact-me > div:nth-child(4),
 .contact-me > div:nth-child(5) {
   padding: 10px 0;
+  /* border: solid 1px blue; */
+}
+
+.contact-me > div:nth-child(3) > a,
+.contact-me > div:nth-child(4) > a {
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (max-width: 778px) {
   footer h1 {
-    /* border: solid 1px red; */
     background-color: #f9fafb;
   }
+
   footer .grid-wrapper {
     grid-template-columns: 1fr;
     justify-items: auto;
     gap: 20px;
-    /* margin-top: 50px; */
-  }
-
-  footer .photo {
-    /* justify-self: auto; */
-    /* height: 300px;
-    object-fit: cover; */
   }
 }
