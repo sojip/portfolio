@@ -4,6 +4,8 @@
   --header-content-width: 800px;
   /* --text-backgroundColor: #fdf4ff; */
   --text-backgroundColor: #fefce8;
+  /* --background-transparent: rgb(254, 252, 232, 0.2); */
+  --background-transparent: rgb(0, 0, 0, 0.2);
 }
 
 * {
@@ -45,7 +47,7 @@ header {
 }
 
 .contentWrapper {
-  position: relative;
+  /* position: relative; */
 }
 
 .image-wrapper {
@@ -53,6 +55,7 @@ header {
   float: left;
   margin-right: 20px;
   position: relative;
+  /* border: solid 1px blue; */
 }
 
 header .photo {
@@ -72,10 +75,11 @@ header .name {
   bottom: 0;
   width: 100%;
   z-index: 3;
-  color: white;
-  font-size: 2rem;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.09);
+  background-color: var(--primaryColor);
   padding: 10px;
   border-radius: 0 0 10px 10px;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
@@ -84,8 +88,11 @@ header .name {
 
 .about-wrapper {
   padding: 75px 2.5vw;
+  position: relative;
   height: 100%;
   width: 100%;
+  /* border: solid 1px red; */
+  top: 50%;
 }
 
 .textcontainer {
@@ -206,26 +213,30 @@ footer .grid-wrapper {
   padding: 0 5vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+  gap: 2.5vw;
   align-items: center;
 }
 
-.footer-path-wrapper {
+/* .footer-path-wrapper {
   height: 90%;
   background-color: var(--primaryColor);
+
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   clip-path: polygon(0 50%, 5% 50%, 100% 0%, 100% 100%, 0 100%);
   z-index: -1;
-}
+} */
 
 .contact-me {
-  background-color: var(--text-backgroundColor);
+  background-color: var(--primaryColor);
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* color: white; */
 }
 
 .contact-me img {
@@ -238,11 +249,14 @@ footer .grid-wrapper {
   margin-left: 0;
 }
 
-footer .photo {
-  width: 50%;
-  height: auto;
+.mapouter {
   border-radius: 10px;
-  justify-self: center;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.gmap_canvas {
+  border-radius: 10px;
 }
 
 .contact-me p:nth-child(1),
