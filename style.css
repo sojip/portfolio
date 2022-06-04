@@ -88,7 +88,7 @@ header .name {
 
 .about-wrapper {
   padding: 75px 2.5vw;
-  position: relative;
+  /* position: relative; */
   height: 100%;
   width: 100%;
   /* border: solid 1px red; */
