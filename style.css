@@ -13,6 +13,11 @@
   padding: 0;
 }
 
+section {
+  width: 100%;
+  max-width: 1600px;
+}
+
 html,
 body {
   width: 100%;
@@ -164,13 +169,13 @@ header {
   padding-right: 20px;
 }
 
-/* footer */
-footer {
+/* contact  me */
+.contact {
   min-height: 100%;
   position: relative;
-  padding: 0 0 5vh 0;
+  /* padding: 0 0 5vh 0; */
 }
-footer h1 {
+.contact h1 {
   text-transform: capitalize;
   margin-bottom: 50px;
   padding: 10px 0 10px 5vw;
@@ -178,7 +183,7 @@ footer h1 {
   top: 0;
   padding: 20px 0 20px 5vw;
 }
-footer .grid-wrapper {
+.contact .grid-wrapper {
   padding: 0 5vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -233,11 +238,11 @@ footer .grid-wrapper {
 }
 
 @media screen and (max-width: 778px) {
-  footer h1 {
+  .contact h1 {
     background-color: #f9fafb;
   }
 
-  footer .grid-wrapper {
+  .contact .grid-wrapper {
     grid-template-columns: 1fr;
     justify-items: auto;
     gap: 20px;
